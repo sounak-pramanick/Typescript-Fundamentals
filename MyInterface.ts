@@ -31,6 +31,12 @@ const john: User = {
     githubToken: 'github'
 }
 
+/*
+tsc --init
+npm init -y
+
+*/
+
 const jane: Admin = {
     dbId: 10,
     email: 'john@email.com',
