@@ -35,8 +35,44 @@
 // const john = new User('john@email.com', 'John', '123');
 
 // getters and setters
+// class User {
+//     private _courseCount = 1;
+
+//     readonly city: string = 'New York';
+
+//     constructor(
+//         public email: string, 
+//         public name: string,
+//         private userId: string
+//         ) {
+//     }
+
+//     get getAppleEmail(): string {
+//         return `apple${this.email}`;
+//     }
+
+//     get courseCount(): number {
+//         return this._courseCount;
+//     }
+
+//     set courseCount(courseNum) {
+//         if(courseNum <= 1) {
+//             throw new Error('Course count should be more than 1');
+//         }
+//         this._courseCount = courseNum;
+//     }
+
+//     private deleteToken() {
+//         console.log('Token deleted');
+//     }
+// }
+// const john = new User('john@email.com', 'John', '123');
+// john.deleteToken();
+
+
+// protected
 class User {
-    private _courseCount = 1;
+    protected _courseCount = 1;
 
     readonly city: string = 'New York';
 
@@ -67,4 +103,11 @@ class User {
     }
 }
 const john = new User('john@email.com', 'John', '123');
-// john.deleteToken();
+
+class SubUser extends User {
+    isFamily: boolean = true;
+
+    changeCourseCount() {
+        this._courseCount = 3;
+    }
+}
