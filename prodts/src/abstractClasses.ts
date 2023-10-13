@@ -24,6 +24,8 @@ class Instagram extends TakePhoto {
     getSepia(): void {
         console.log('Sepia');
     }
+
+    // can override getReelTime function here
 }
 
 let photo = new Instagram('test', 'Test', 3);
